@@ -1,0 +1,41 @@
+.landing-page-container {
+    margin: 0 1rem;
+    height: 100%;
+}
+
+.landing-page-header {
+    display: flex;
+    justify-content: center;
+}
+
+.landing-page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mat-card-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.landing-page-card {
+    flex: 1;
+    max-width: calc(33.33% - 1rem);
+    background-color: #424242;
+    color: #ffffff;
+}
+
+.landing-page-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.divider {
+    border: 1px solid #ffffff;
+    width: 95%;
+}
+

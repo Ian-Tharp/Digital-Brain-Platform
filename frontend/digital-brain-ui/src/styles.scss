@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+  margin: 0;
+  padding-top: 60px; /* Match the header height */
+  background: rgb(184, 180, 183);
+}
+
