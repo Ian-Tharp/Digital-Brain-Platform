@@ -1,1 +1,166 @@
-<p>agent-builder works!</p>
+<div class="agent-builder-container">
+  <div class="agent-builder-header">
+    <h3>Agent Builder</h3>
+  </div>
+  <mat-horizontal-stepper linear>
+
+    <!-- Step 1: Define Agent -->
+    <mat-step>
+      <ng-template matStepLabel>Define Agent</ng-template>
+      <ng-template matStepContent>
+        <form>
+          <div class="define-agent-form">
+            <!-- Template selection UI components go here -->
+            <div class="define-agent-container">
+              <!-- Agent Name -->
+              <div class="define-agent-name">
+                <mat-form-field>
+                  <input matInput placeholder="Enter Agent Name" />
+                </mat-form-field>
+              </div>
+              <!-- Agent Description -->
+              <div class="define-agent-description">
+                <mat-form-field class="agent-description-field">
+                  <mat-label>Enter Agent Description</mat-label>
+                  <textarea matInput placeholder="Ex. Enter Agent Description..."></textarea>
+                </mat-form-field>
+              </div>
+              <!-- Agent Purpose -->
+              <div class="define-agent-purpose">
+                <mat-form-field>
+                  <input matInput placeholder="Enter Agent Purpose" />
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </form>
+        <hr>
+        <div class="next-button-container">
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </ng-template>
+    </mat-step>
+
+    <!-- Step 2: Configure Agent -->
+    <mat-step>
+      <ng-template matStepLabel>Configure Agent</ng-template>
+      <ng-template matStepContent>
+        <form>
+          <!-- Template selection UI components go here -->
+          <div class="configure-agent-form">
+            <!-- Agent Name -->
+            <div class="configure-agent-name">
+              <mat-form-field>
+                <input matInput placeholder="Enter Agent Name" />
+              </mat-form-field>
+            </div>
+            <!-- Agent Description -->
+            <div class="configure-agent-description">
+              <mat-form-field>
+                <input matInput placeholder="Enter Agent Description" />
+              </mat-form-field>
+            </div>
+            <!-- Agent Purpose -->
+            <div class="configure-agent-purpose">
+              <mat-form-field>
+                <input matInput placeholder="Enter Agent Purpose" />
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+        <hr>
+        <div class="next-button-container">
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </ng-template>
+    </mat-step>
+
+    <!-- Step 3: Agent Interactions -->
+    <mat-step>
+      <ng-template matStepLabel>Agent Interactions</ng-template>
+      <ng-template matStepContent>
+        <form>
+          <!-- Template selection UI components go here -->
+          <div class="agent-interactions-form">
+            <!-- Agent Name -->
+            <div class="agent-interactions-name">
+              <mat-form-field>
+                <input matInput placeholder="Enter Agent Name" />
+              </mat-form-field>
+            </div>
+            <!-- Agent Description -->
+            <div class="agent-interactions-description">
+              <mat-form-field>
+                <input matInput placeholder="Enter Agent Description" />
+              </mat-form-field>
+            </div>
+            <!-- Agent Purpose -->
+            <div class="agent-interactions-purpose">
+              <mat-form-field>
+                <input matInput placeholder="Enter Agent Purpose" />
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+        <hr>
+        <div class="next-button-container">
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </ng-template>
+    </mat-step>
+
+    <!-- Step 4: Agent Capabilities -->
+    <mat-step>
+      <ng-template matStepLabel>Agent Capabilities</ng-template>
+      <ng-template matStepContent>
+        <form>
+          <!-- Template selection UI components go here -->
+          <div class="agent-capabilities-form">
+            <!-- Agent Name -->
+            <div class="agent-capabilities-name">
+              <mat-form-field>
+                <input matInput placeholder="Enter Agent Name" />
+              </mat-form-field>
+            </div>
+            <!-- Agent Description -->
+            <div class="agent-capabilities-description">
+              <mat-form-field>
+                <input matInput placeholder="Enter Agent Description" />
+              </mat-form-field>
+            </div>
+            <!-- Agent Purpose -->
+            <div class="agent-capabilities-purpose">
+              <mat-form-field>
+                <input matInput placeholder="Enter Agent Purpose" />
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+        <hr>
+        <div class="next-button-container">
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </ng-template>
+    </mat-step>
+
+    <!-- Step 5: Review & Share -->
+    <mat-step>
+      <ng-template matStepLabel>Review & Share</ng-template>
+      <ng-template matStepContent>
+        <div class="review-share-container">
+          <h3>Review & Share</h3>
+          <!-- Additional content for review and sharing goes here -->
+        </div>
+        <hr>
+        <div class="next-button-container">
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button color="primary">Complete</button>
+        </div>
+      </ng-template>
+    </mat-step>
+
+  </mat-horizontal-stepper>
+</div>

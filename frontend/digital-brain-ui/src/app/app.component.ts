@@ -17,27 +17,10 @@ import { FooterComponent } from './common/footer/footer.component';
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  animations: [
-    trigger('panelState', [
-      state('expanded', style({
-        height: '*',
-      })),
-      state('collapsed', style({
-        height: '25px',
-        width: '50px',
-      })),
-      transition('expanded <=> collapsed', [
-        animate('1.5s ease-in-out')
-      ]),
-    ])
-  ]
 })
 
 export class AppComponent {
   title = 'Digital Brain Platform';
   isExpanded = true;
 
-  togglePanel() {
-    this.isExpanded = !this.isExpanded;
-  }
 }

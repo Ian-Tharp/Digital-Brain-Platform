@@ -7,19 +7,6 @@
     <router-outlet></router-outlet>
   </div>
 
-  <div class="command-panel" [@panelState]="isExpanded ? 'expanded' : 'collapsed'" (click)="togglePanel()">
-    @if (isExpanded) {
-      <div class="command-panel-container">
-        <app-command-panel></app-command-panel>
-      </div>
-    }
-    @else {
-      <div class="toggle-icon">
-        ▲
-      </div>
-    }
-  </div>
-
   <div class="app-footer">
     <app-footer></app-footer>
   </div>
