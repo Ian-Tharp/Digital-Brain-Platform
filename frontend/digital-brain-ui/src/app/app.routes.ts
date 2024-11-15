@@ -14,6 +14,11 @@ import { InteractiveJournalComponent } from './user/interactive-journal/interact
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'landing-page',
+    pathMatch: 'full'
+  },
+  {
+    path: 'landing-page',
     component: LandingPageComponent
   },
   {

@@ -1,3 +1,20 @@
-.command-panel {
-    width: 100%; // Adjust as needed
+.command-panel-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.command-input {
+    flex: 1;
+    margin-right: 0.5rem;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+mat-icon-button {
+    margin-left: 0.5rem;
 }

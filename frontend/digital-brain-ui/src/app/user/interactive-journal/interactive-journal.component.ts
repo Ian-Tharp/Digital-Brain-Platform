@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
 
 interface ChatMessage {
     sender: string;
@@ -21,6 +22,7 @@ interface JournalEntry {
     title: string;
     text: string;
     summary: string;
+    rating: number;
 }
 
 @Component({
@@ -36,7 +38,8 @@ interface JournalEntry {
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatSelectModule
   ],
   templateUrl: './interactive-journal.component.html',
   styleUrl: './interactive-journal.component.scss'
@@ -49,7 +52,8 @@ export class InteractiveJournalComponent {
         date: new Date(),
         title: '',
         text: '',
-        summary: ''
+        summary: '',
+        rating: 3
     };
     chatInput: string = '';
     chatMessages: ChatMessage[] = [
@@ -87,7 +91,8 @@ export class InteractiveJournalComponent {
             date: this.selectedDate,
             title: '',
             text: '',
-            summary: ''
+            summary: '',
+            rating: 3
         };
     }
 

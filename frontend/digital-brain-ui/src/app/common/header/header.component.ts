@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
 import { CommandPanelComponent } from '../../shared/command-panel/command-panel.component';
 
 @Component({
@@ -9,10 +10,11 @@ import { CommandPanelComponent } from '../../shared/command-panel/command-panel.
   imports: [
     MatIconModule,
     MatButtonModule,
+    RouterLink,
     CommandPanelComponent
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
 

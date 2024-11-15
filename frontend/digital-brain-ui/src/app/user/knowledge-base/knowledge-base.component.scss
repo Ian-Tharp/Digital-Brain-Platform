@@ -1,0 +1,57 @@
+.knowledge-base-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 250px;
+  padding: 16px;
+}
+
+.sidenav-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.add-file-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #3f51b5;
+}
+
+.add-file-button mat-icon {
+  margin-right: 8px;
+}
+
+.mat-list-item.selected {
+  background-color: rgba(63, 81, 181, 0.1);
+}
+
+.viewer-container {
+  padding: 16px;
+}
+
+.tag-input {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.file-viewer {
+  padding: 16px;
+}
+
+.no-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.54);
+}

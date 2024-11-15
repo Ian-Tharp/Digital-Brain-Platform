@@ -2,7 +2,8 @@ from fastapi import FastAPI
 from contextlib import asynccontextmanager
 import uvicorn
 import logging
-from controllers import router as micro_learnings_router
+from controllers.micro_learnings import router as micro_learnings_router
+
 
 logger = logging.getLogger(__name__)
 

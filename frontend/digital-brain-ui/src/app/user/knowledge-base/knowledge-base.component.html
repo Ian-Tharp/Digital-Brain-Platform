@@ -1,1 +1,54 @@
-<p>knowledge-base works!</p>
+<mat-tab-group [(selectedIndex)]="selectedTab" (selectedTabChange)="onTabChange($event)">
+  <mat-tab label="Personal Knowledge Base">
+    <div class="knowledge-base-container">
+      <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav mode="side" opened class="sidenav">
+          <div class="sidenav-header">
+            <label for="file-upload" class="add-file-button">
+              <mat-icon>add</mat-icon> Add File
+            </label>
+            <input type="file" id="file-upload" (change)="addFile($event)" hidden />
+          </div>
+          <mat-nav-list>
+            <mat-list-item *ngFor="let file of personalFiles" (click)="selectFile(file)" [class.selected]="file === selectedFile">
+              <mat-icon matListIcon>insert_drive_file</mat-icon>
+              <h4 matLine>{{ file.name }}</h4>
+            </mat-list-item>
+          </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+          <div class="viewer-container" *ngIf="selectedFile">
+            <div class="tag-input">
+              <mat-form-field appearance="outline">
+                <mat-label>Add Tag</mat-label>
+                <input matInput [(ngModel)]="newTag" (keyup.enter)="addTag()" />
+                <button mat-icon-button matSuffix (click)="addTag()">
+                  <mat-icon>add</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+            <mat-card class="file-viewer">
+              <ng-container [ngSwitch]="selectedFile.type">
+                <iframe *ngSwitchCase="'application/pdf'" [src]="selectedFile.url" width="100%" height="600px"></iframe>
+                <img *ngSwitchCase="'image/png'" [src]="selectedFile.url" alt="{{ selectedFile.name }}" />
+                <p *ngSwitchDefault>Preview not available for this file type.</p>
+              </ng-container>
+              <mat-chip-set>
+                <mat-chip *ngFor="let tag of selectedFile.tags">{{ tag }}</mat-chip>
+              </mat-chip-set>
+            </mat-card>
+          </div>
+          @if (!selectedFile) {
+            <div class="no-selection">
+              <p>Select a file to view its content and tags.</p>
+            </div>
+          }
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+  </mat-tab>
+  <mat-tab label="Global Knowledge Base">
+    <p>Global Knowledge Base functionality coming soon!</p>
+  </mat-tab>
+</mat-tab-group>

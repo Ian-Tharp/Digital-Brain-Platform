@@ -12,12 +12,14 @@
     background-color: #666666;
     border-radius: 4px 4px 0 0;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1200px;
+    padding: 0.5rem 1rem;
 
     &.collapsed {
         height: 20px;
     }
 }
-
 
 .toggle-icon {
     text-align: center;

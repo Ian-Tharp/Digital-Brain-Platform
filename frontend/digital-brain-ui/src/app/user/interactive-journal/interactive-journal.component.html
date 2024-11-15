@@ -1,6 +1,6 @@
 <div class="interactive-journal-container">
     <div class="interactive-journal-header">
-        <h1>Interactive Journal</h1>
+        <h2>Interactive Journal</h2>
     </div>
     <div class="interactive-journal-content">
         <mat-card class="interactive-journal-main">
@@ -15,9 +15,9 @@
                         </mat-form-field>
 
                         <div class="entries-list" *ngIf="entriesForSelectedDate.length > 0">
-                            <button mat-button color="primary" 
-                                    *ngFor="let entry of entriesForSelectedDate" 
-                                    (click)="selectEntry(entry)" 
+                            <button mat-button color="primary"
+                                    *ngFor="let entry of entriesForSelectedDate"
+                                    (click)="selectEntry(entry)"
                                     class="entry-button">
                                     <div class="entry-content">
                                         <span class="entry-title">{{ entry.title }}</span>
@@ -29,16 +29,29 @@
                         <p *ngIf="entriesForSelectedDate.length === 0" class="no-entries">No entries for this date.</p>
                     </div>
                     <div class="journal-notes">
+                      <div class="journal-notes-header">
                         <mat-form-field appearance="fill" class="title-input">
-                            <mat-label>Title</mat-label>
-                            <input matInput [(ngModel)]="currentEntry.title" placeholder="Enter title">
+                          <mat-label>Title</mat-label>
+                          <input matInput [(ngModel)]="currentEntry.title" placeholder="Enter title">
                         </mat-form-field>
 
-                        <mat-form-field appearance="fill" class="notes-input">
-                            <mat-label>Write your journal entry</mat-label>
-                            <textarea matInput [(ngModel)]="currentEntry.text" rows="10"></textarea>
+                        <mat-form-field appearance="fill" class="rating-select-field">
+                          <mat-label>Overall Rating</mat-label>
+                          <mat-select [(ngModel)]="currentEntry.rating">
+                            <mat-option [value]="1">Very Bad</mat-option>
+                            <mat-option [value]="2">Bad</mat-option>
+                            <mat-option [value]="3">Neutral</mat-option>
+                            <mat-option [value]="4">Good</mat-option>
+                            <mat-option [value]="5">Very Good</mat-option>
+                          </mat-select>
                         </mat-form-field>
-                        <button mat-raised-button color="primary" (click)="saveEntry()">Save</button>
+                      </div>
+
+                      <mat-form-field appearance="fill" class="notes-input">
+                          <mat-label>Write your journal entry</mat-label>
+                          <textarea matInput [(ngModel)]="currentEntry.text" rows="10"></textarea>
+                      </mat-form-field>
+                      <button mat-raised-button color="primary" (click)="saveEntry()">Save</button>
                     </div>
                     <div class="journal-chat">
                         <mat-card class="chat-window">

@@ -1,7 +1,13 @@
 <div class="command-panel-container">
-    <div class="command-panel">
-        <mat-form-field>
-            <input matInput placeholder="Enter your command here..." />
-        </mat-form-field>
-    </div>
+    <mat-form-field appearance="fill" class="command-input">
+        <input
+            matInput
+            [(ngModel)]="commandInput"
+            (keyup.enter)="sendCommand()"
+            placeholder="Enter command here..."
+        />
+        <button mat-icon-button color="primary" matSuffix (click)="sendCommand()" aria-label="Send command">
+            <mat-icon>send</mat-icon>
+        </button>
+    </mat-form-field>
 </div>
