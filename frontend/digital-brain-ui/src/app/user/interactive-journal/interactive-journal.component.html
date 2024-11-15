@@ -1,0 +1,71 @@
+<div class="interactive-journal-container">
+    <div class="interactive-journal-header">
+        <h1>Interactive Journal</h1>
+    </div>
+    <div class="interactive-journal-content">
+        <mat-card class="interactive-journal-main">
+            <mat-card-content>
+                <div class="journal-main-content">
+                    <div class="journal-datepicker">
+                        <mat-form-field appearance="fill" class="date-picker-field">
+                            <mat-label>Select Date</mat-label>
+                            <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+
+                        <div class="entries-list" *ngIf="entriesForSelectedDate.length > 0">
+                            <button mat-button color="primary" 
+                                    *ngFor="let entry of entriesForSelectedDate" 
+                                    (click)="selectEntry(entry)" 
+                                    class="entry-button">
+                                    <div class="entry-content">
+                                        <span class="entry-title">{{ entry.title }}</span>
+                                        <span class="entry-date">{{ entry.date | date:'hh:mm a - MM/dd/yyyy' }}</span>
+                                    </div>
+                            </button>
+                        </div>
+
+                        <p *ngIf="entriesForSelectedDate.length === 0" class="no-entries">No entries for this date.</p>
+                    </div>
+                    <div class="journal-notes">
+                        <mat-form-field appearance="fill" class="title-input">
+                            <mat-label>Title</mat-label>
+                            <input matInput [(ngModel)]="currentEntry.title" placeholder="Enter title">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" class="notes-input">
+                            <mat-label>Write your journal entry</mat-label>
+                            <textarea matInput [(ngModel)]="currentEntry.text" rows="10"></textarea>
+                        </mat-form-field>
+                        <button mat-raised-button color="primary" (click)="saveEntry()">Save</button>
+                    </div>
+                    <div class="journal-chat">
+                        <mat-card class="chat-window">
+                            <mat-card-header>
+                                <mat-card-title class="chat-title">Chatbot</mat-card-title>
+                            </mat-card-header>
+                            <hr class="chat-divider">
+                            <mat-card-content class="chat-content">
+                                <div class="chat-messages">
+                                    <div *ngFor="let message of chatMessages" class="chat-message">
+                                        <strong>{{message.sender}}:</strong> {{message.text}}
+                                    </div>
+                                </div>
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <mat-form-field appearance="fill" class="chat-input">
+                                    <mat-label>Type a message</mat-label>
+                                    <input matInput [(ngModel)]="chatInput" (keyup.enter)="sendMessage()">
+                                </mat-form-field>
+                                <button mat-icon-button color="primary" (click)="sendMessage()">
+                                    <mat-icon>send</mat-icon>
+                                </button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

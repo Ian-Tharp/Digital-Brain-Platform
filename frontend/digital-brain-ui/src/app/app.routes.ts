@@ -8,6 +8,7 @@ import { MicroLearningsComponent } from './user/micro-learnings/micro-learnings.
 import { InsightsAnalyticsComponent } from './user/insights-analytics/insights-analytics.component';
 import { BoardsComponent } from './user/boards/boards.component';
 import { AgentLibraryComponent } from './user/agent-builder/agent-library/agent-library.component';
+import { InteractiveJournalComponent } from './user/interactive-journal/interactive-journal.component';
 
 
 export const routes: Routes = [
@@ -42,6 +43,10 @@ export const routes: Routes = [
   {
     path: 'insights-analytics',
     component: InsightsAnalyticsComponent
+  },
+  {
+    path: 'interactive-journal',
+    component: InteractiveJournalComponent
   },
   {
     path: '**',

@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './common/header/header.component';
 import { CommandPanelComponent } from "./shared/command-panel/command-panel.component";
-import { trigger } from '@angular/animations';
-import { animate, style, state, transition } from '@angular/animations';
 import { FooterComponent } from './common/footer/footer.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +13,7 @@ import { FooterComponent } from './common/footer/footer.component';
     HeaderComponent,
     CommandPanelComponent,
     FooterComponent,
+    MatButtonModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

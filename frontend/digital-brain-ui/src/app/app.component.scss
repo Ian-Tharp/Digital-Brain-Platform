@@ -9,34 +9,15 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: auto;
     background-color: #666666;
     border-radius: 4px 4px 0 0;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    overflow: hidden;
 
     &.collapsed {
         height: 20px;
     }
 }
 
-.command-panel-container {
-    display: flex;
-    padding: 2px 3rem 0px 3rem;
-    border: 2px solid #000000;
-    border-bottom: none;
-    border-radius: 4px 4px 0 0;
-    background-color: #a1a1a1;
-    max-width: 300px;
-    max-height: 150px;
-    font-size: 1.2rem;
-}
-
-.command-panel:hover {
-    background-color: #b1b1b1;
-}
 
 .toggle-icon {
     text-align: center;
