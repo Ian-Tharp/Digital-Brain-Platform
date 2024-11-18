@@ -4,24 +4,44 @@
   flex-direction: column;
 }
 
+.knowledge-base-main {
+  margin-top: 0.5rem;
+}
+
 .sidenav-container {
   height: 100%;
 }
 
+.sidenav-divider {
+  width: 90%;
+}
+
 .sidenav {
-  width: 250px;
-  padding: 16px;
+  width: 25%;
+  margin: 0.5rem;
 }
 
 .sidenav-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 16px;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.sidenav-header label {
+  margin-bottom: 8px;
+}
+
+.sidenav-header hr {
+  width: 100%;
+  margin: 8px 0;
 }
 
 .add-file-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: #3f51b5;
 }
@@ -34,8 +54,14 @@
   background-color: rgba(63, 81, 181, 0.1);
 }
 
+.mat-list-item {
+  display: flex;
+  align-items: center;
+}
+
 .viewer-container {
   padding: 16px;
+  overflow-y: auto;
 }
 
 .tag-input {
@@ -48,10 +74,22 @@
   padding: 16px;
 }
 
+.mat-chip-set {
+  margin-bottom: 16px;
+}
+
 .no-selection {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: rgba(0, 0, 0, 0.54);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.mat-tab-group {
+  margin-top: 0.5rem;
+}
+
+.mat-tab-label {
+  font-size: 1.2rem;
 }
