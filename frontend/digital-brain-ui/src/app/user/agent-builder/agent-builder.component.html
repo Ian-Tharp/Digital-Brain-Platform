@@ -1,8 +1,8 @@
 <div class="agent-builder-container">
   <div class="agent-builder-header">
-    <h3>Agent Builder</h3>
+    <h3 class="agent-builder-header-text">Agent Builder</h3>
   </div>
-  <mat-horizontal-stepper linear>
+  <mat-horizontal-stepper linear class="agent-builder-stepper">
 
     <!-- Step 1: Define Agent -->
     <mat-step>
@@ -70,7 +70,7 @@
         </form>
         <hr>
         <div class="next-button-container">
-          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperPrevious class="back-button">Back</button>
           <button mat-button matStepperNext>Next</button>
         </div>
       </ng-template>
@@ -105,7 +105,7 @@
         </form>
         <hr>
         <div class="next-button-container">
-          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperPrevious class="back-button">Back</button>
           <button mat-button matStepperNext>Next</button>
         </div>
       </ng-template>
@@ -140,7 +140,7 @@
         </form>
         <hr>
         <div class="next-button-container">
-          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperPrevious class="back-button">Back</button>
           <button mat-button matStepperNext>Next</button>
         </div>
       </ng-template>
@@ -151,12 +151,12 @@
       <ng-template matStepLabel>Review & Share</ng-template>
       <ng-template matStepContent>
         <div class="review-share-container">
-          <h3>Review & Share</h3>
+          <h3 class="review-share-header">Review & Share</h3>
           <!-- Additional content for review and sharing goes here -->
         </div>
         <hr>
         <div class="next-button-container">
-          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperPrevious class="back-button">Back</button>
           <button mat-button color="primary">Complete</button>
         </div>
       </ng-template>

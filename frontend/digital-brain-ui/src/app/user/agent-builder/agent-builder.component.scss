@@ -6,10 +6,78 @@
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
 }
 
+.agent-builder-header-text {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 .define-agent-form {
-  display: flex;
+  margin-top: 1rem;
+}
+
+.configure-agent-form {
+  margin-top: 1rem;
+}
+
+.agent-interactions-form {
+  margin-top: 1rem;
+}
+
+.agent-capabilities-form {
+  margin-top: 1rem;
 }
 
 .define-agent-container {
   margin-right: 1rem;
+  flex: 1;
+}
+
+.review-share-header {
+  text-align: center;
+  color: white;
+}
+
+.next-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+
+  button {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    min-width: 120px;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #e0e0e0;
+  }
+
+  .back-button {
+    margin-right: 1rem;
+  }
+}
+
+mat-form-field {
+  width: 25%;
+}
+
+@media (min-width: 600px) {
+  .define-agent-form {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 599px) {
+  .define-agent-form {
+    flex-direction: column;
+  }
+}
+
+.agent-builder-stepper .mat-horizontal-stepper-header {
+  .mat-step-label {
+    font-size: 5rem;
+    font-weight: 600;
+  }
 }
