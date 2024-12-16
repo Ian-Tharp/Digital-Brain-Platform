@@ -9,7 +9,7 @@ import { InsightsAnalyticsComponent } from './user/insights-analytics/insights-a
 import { BoardsComponent } from './user/boards/boards.component';
 import { AgentLibraryComponent } from './user/agent-builder/agent-library/agent-library.component';
 import { InteractiveJournalComponent } from './user/interactive-journal/interactive-journal.component';
-
+import { StoryBuilderComponent } from './user/story-builder/story-builder.component';
 
 export const routes: Routes = [
   {
@@ -52,6 +52,10 @@ export const routes: Routes = [
   {
     path: 'interactive-journal',
     component: InteractiveJournalComponent
+  },
+  {
+    path: 'story-builder',
+    component: StoryBuilderComponent
   },
   {
     path: '**',

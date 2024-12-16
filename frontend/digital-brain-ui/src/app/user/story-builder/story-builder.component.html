@@ -1,1 +1,27 @@
-<p>story-builder works!</p>
+<div class="story-builder-container">
+    <div class="left-section">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter Location Query</mat-label>
+            <input matInput [(ngModel)]="userInput" placeholder="e.g., Describe a mountainous region">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="generateLocation()">Generate Location</button>
+        @if (previousQueries.length > 0) {
+            <div class="previous-queries">
+                <h4>Previous Queries:</h4>
+                <ul>
+                    @for (query of previousQueries; track query) {
+                        <li>{{ query }}</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+    <div class="right-section">
+        @if (locationResult) {
+            <div class="result">
+                <h3>Generated Location:</h3>
+                <div [innerHTML]="sanitizedResult"></div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,6 +1,7 @@
 <div class="landing-page-container">
-    <div class="landing-page-header">
+    <div class="landing-page-header-container">
         <h2>Welcome to the Digital Brain UI</h2>
+        <p class="landing-page-quote">{{ welcomeMessage }}</p>
     </div>
     <hr>
     <div class="landing-page-content">
@@ -168,6 +169,30 @@
                 <mat-card-content>
                     <p>
                         Insights & Analytics content here with quick links to the most important pages.
+                        <ul>
+                            <li>Quick Link 1</li>
+                            <li>Quick Link 2</li>
+                            <li>Quick Link 3</li>
+                        </ul>
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card class="landing-page-card">
+                <mat-card-header class="landing-page-card-header">
+                    <mat-card-title>Story Builder</mat-card-title>
+                    <button
+                        mat-mini-fab
+                        aria-label="Story Builder"
+                        [routerLink]="['/story-builder']"
+                        class="card-button"
+                    >
+                        <mat-icon>build</mat-icon>
+                    </button>
+                </mat-card-header>
+                <hr class="divider">
+                <mat-card-content>
+                    <p>
+                        Story Builder content here with quick links to the most important pages.
                         <ul>
                             <li>Quick Link 1</li>
                             <li>Quick Link 2</li>

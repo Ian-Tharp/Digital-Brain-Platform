@@ -1,6 +1,15 @@
 from fastapi import APIRouter
-
+from models.UserQuery import UserQuery
+from agents.story_builder.aloryith_geographer_and_environmental_designer_agent import AloryithGeographerAndEnvironmentalDesignerAgent
 router = APIRouter()
+
+
+@router.post("/aloryith/generate/location")
+async def generate_location(user_message: UserQuery):
+    agent = AloryithGeographerAndEnvironmentalDesignerAgent()
+    return agent.run(user_message.content)
+
+
 
 
 @router.post("/aloryith/generate-story")
@@ -31,9 +40,6 @@ async def generate_world_event(request: str):
 async def generate_character_dialogue(request: str):
     pass
 
-@router.post("/aloryith/generate/location")
-async def generate_location(request: str):
-    pass
 
 @router.post("/aloryith/generate/cultural-language")
 async def generate_cultural_language(request: str):
