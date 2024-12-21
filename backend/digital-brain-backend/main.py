@@ -10,6 +10,7 @@ from controllers.aloryith_storybuilder import router as aloryith_storybuilder_ro
 from setup import get_4o_llm
 from fastapi.middleware.cors import CORSMiddleware
 from controllers.welcome import router as welcome_router
+
 load_dotenv()
 
 logger = logging.getLogger(__name__)
@@ -28,7 +29,6 @@ async def lifespan(app: FastAPI):
     app.include_router(micro_learnings_router)
     app.include_router(aloryith_storybuilder_router)
     app.include_router(welcome_router)
-
 
     try:
 
@@ -55,4 +55,3 @@ async def root():
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8001)
-

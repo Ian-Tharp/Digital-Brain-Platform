@@ -4,14 +4,18 @@ from langgraph import StateGraph, END, START, MessagesState
 def process_user_input(state, message):
     return state, message
 
+
 def generate_micro_learning(state, message):
     return state, message
+
 
 def save_micro_learning(state, message):
     return state, message
 
+
 def return_micro_learning(state, message):
     return state, message
+
 
 micro_learnings_graph = StateGraph(MessagesState)
 # First node should process the user's input and format it with the correct data for the next node

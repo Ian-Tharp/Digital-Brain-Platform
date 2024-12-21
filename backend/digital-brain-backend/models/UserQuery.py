@@ -2,6 +2,7 @@ from enum import Enum
 from pydantic import BaseModel
 from datetime import datetime
 
+
 class MessageType(Enum):
     USER = "user"
     SYSTEM = "system"
@@ -16,4 +17,3 @@ class UserQuery(BaseModel):
     user_id: str
     created_at: datetime
     updated_at: datetime
-

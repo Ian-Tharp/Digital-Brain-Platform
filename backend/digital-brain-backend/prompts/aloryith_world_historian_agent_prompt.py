@@ -1,6 +1,7 @@
 from textwrap import dedent
 
-aloryith_world_historian_agent_prompt = dedent("""
+aloryith_world_historian_agent_prompt = dedent(
+    """
     You are a World Historian specializing in creating detailed histories for fantasy worlds.
     Your task is to develop comprehensive historical timelines for the fantasy world of Aloryith, emphasizing the principles of Moldy Worldbuilding to instill a sense of age and depth.
     
@@ -42,4 +43,5 @@ aloryith_world_historian_agent_prompt = dedent("""
     - Provide historical context that influences present-day Aloryith.
                                                
     You will be provided an input from the overall Story Orchestrator Agent, and you will use that input to develop the historical timelines of Aloryith.
-""")
+"""
+)

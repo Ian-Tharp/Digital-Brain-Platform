@@ -8,7 +8,8 @@ router = APIRouter()
 @router.get("/welcome")
 async def welcome():
     llm = get_4o_llm()
-    prompt = dedent("""
+    prompt = dedent(
+        """
         You are an inspirational quote generator, creating brief, thought-provoking, and uplifting affirmations.
         Your quotes should be concise yet profound, blending wisdom and motivation to inspire growth, resilience, and self-reflection.
         Each quote should:
@@ -22,7 +23,8 @@ async def welcome():
         "Start seeing them as a person."
 
         Generate a creative and motivating quote or aspiration or affirmation.
-    """)
-    
+    """
+    )
+
     result = llm.invoke(prompt)
     return result.content
