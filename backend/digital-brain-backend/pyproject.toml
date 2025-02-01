@@ -5,6 +5,7 @@ description = "Backend service for the Digital Brain Platform."
 authors = ["Ian Tharp <praht09ian@gmail.com>"]
 license = "MIT"
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"

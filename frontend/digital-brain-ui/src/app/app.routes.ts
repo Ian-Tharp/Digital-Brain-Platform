@@ -10,6 +10,7 @@ import { BoardsComponent } from './user/boards/boards.component';
 import { AgentLibraryComponent } from './user/agent-builder/agent-library/agent-library.component';
 import { InteractiveJournalComponent } from './user/interactive-journal/interactive-journal.component';
 import { StoryBuilderComponent } from './user/story-builder/story-builder.component';
+import { IdeationComponent } from './user/ideation/ideation.component';
 
 export const routes: Routes = [
   {
@@ -56,6 +57,10 @@ export const routes: Routes = [
   {
     path: 'story-builder',
     component: StoryBuilderComponent
+  },
+  {
+    path: 'ideation',
+    component: IdeationComponent
   },
   {
     path: '**',

@@ -1,0 +1,23 @@
+<div class="ideation-container">
+  <div class="chat-section">
+    <div class="chat-input-container">
+      <mat-form-field appearance="fill" class="chat-form-field">
+        <input matInput placeholder="Enter your ideation query..." [(ngModel)]="chatInput" (keyup.enter)="sendMessage()">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+  <div class="responses-section">
+    <h2>Responses</h2>
+    <div class="chat-messages">
+      @if (chatMessages.length > 0) {
+        <div class="message" *ngFor="let message of chatMessages">
+          <strong>{{ message.sender }}:</strong> {{ message.text }}
+        </div>
+      }
+      @if (chatMessages.length === 0) {
+        <p class="no-messages">No messages yet. Send a query to start.</p>
+      }
+    </div>
+  </div>
+</div>
