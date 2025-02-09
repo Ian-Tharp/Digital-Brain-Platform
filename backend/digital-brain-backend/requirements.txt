@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+openai
+langchain
+pydantic
+pytest
+magicmock
+langchain-openai
+python-dotenv
+langsmith
+langchain-postgres
+mcp[cli]
+black

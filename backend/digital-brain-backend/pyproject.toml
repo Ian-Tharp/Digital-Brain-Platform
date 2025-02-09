@@ -11,7 +11,8 @@ package-mode = false
 python = "^3.12"
 fastapi = "^0.115.4"
 uvicorn = "^0.32.0"
-openai = "^1.54.4"
+openai = "^1.61.1"
+
 langchain = "^0.3.7"
 pydantic = "^2.9.2"
 pytest = "^8.3.3"
@@ -20,6 +21,7 @@ langchain-openai = "^0.2.12"
 python-dotenv = "^1.0.1"
 langsmith = "^0.2.3"
 langchain-postgres = "^0.0.12"
+mcp = {extras = ["cli"], version = "^1.2.1"}
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.10.0"
