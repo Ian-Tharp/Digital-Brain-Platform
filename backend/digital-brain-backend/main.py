@@ -8,7 +8,6 @@ from langchain import hub
 from controllers.micro_learnings import router as micro_learnings_router
 from controllers.aloryith_storybuilder import router as aloryith_storybuilder_router
 from controllers.ideation import router as ideation_router
-from setup import get_4o_llm
 from fastapi.middleware.cors import CORSMiddleware
 from controllers.welcome import router as welcome_router
 
@@ -41,6 +40,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
+print("Adding CORS middleware")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:4200"],
@@ -48,7 +48,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+print("CORS middleware added")
 
 @app.get("/")
 async def root():

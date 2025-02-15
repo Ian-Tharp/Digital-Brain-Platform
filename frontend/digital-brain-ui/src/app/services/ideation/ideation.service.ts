@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environment/environment';
+import { UserQuery } from '../../models/UserQuery';
+
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +18,15 @@ export class IdeationService {
    * The backend endpoint will compute the convergence, divergence, 
    * and then catalyst (final synthesis) response.
    */
-  getIdeationResponse(userInput: string): Observable<string> {
-    const params = new HttpParams().set('user_input', userInput);
+  getIdeationResponse(userInput: UserQuery): Observable<string> {
     const url = `${this.baseUrl}/ideation`;
-    return this.http.get<string>(url, { params });
+    const payload: UserQuery = userInput;
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    return this.http.post<string>(url, payload, { headers });
   }
+
+
 }

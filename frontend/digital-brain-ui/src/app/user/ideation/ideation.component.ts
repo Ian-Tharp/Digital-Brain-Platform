@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IdeationService } from '../../services/ideation/ideation-service';
+import { IdeationService } from '../../services/ideation/ideation.service';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-
+import { UserQuery } from '../../models/UserQuery';
 interface ChatMessage {
   sender: string;
   text: string;
@@ -28,10 +28,19 @@ export class IdeationComponent {
     if (this.chatInput.trim()) {
       // Add the user's message to the list
       this.chatMessages.push({ sender: 'User', text: this.chatInput });
-      
+
+      const payload: UserQuery = {
+        id: '1',
+        content: this.chatInput,
+        type: 'user',
+        user_id: '1',
+        created_at: new Date(),
+        updated_at: new Date()
+      };
       // Call the backend and subscribe to the response.
-      this.ideationService.getIdeationResponse(this.chatInput).subscribe({
+      this.ideationService.getIdeationResponse(payload).subscribe({
         next: (response: string) => {
+
           // Append the catalyst response from the backend.
           this.chatMessages.push({ sender: 'Catalyst', text: response });
         },

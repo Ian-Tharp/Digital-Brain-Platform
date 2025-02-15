@@ -26,3 +26,12 @@ def get_openai_client() -> Client:
     return Client(
         api_key=os.getenv("OPENAI_API_KEY")
     )
+
+
+@lru_cache
+def get_o3_mini_llm() -> ChatOpenAI:
+    return ChatOpenAI(
+        model="o3-mini",
+        api_key=os.getenv("OPENAI_API_KEY"),
+        temperature=0.0,
+    )
