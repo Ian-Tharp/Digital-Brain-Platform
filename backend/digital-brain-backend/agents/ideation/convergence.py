@@ -58,4 +58,4 @@ def convergence_thinking(user_input: str) -> str:
     response = llm.invoke(messages)
     
     print("Convergence response: ", response)
-    return response.strip()
+    return response.content.strip()
