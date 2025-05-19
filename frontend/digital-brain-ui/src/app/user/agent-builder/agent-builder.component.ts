@@ -14,7 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatFormFieldModule
   ],
   templateUrl: './agent-builder.component.html',
-  styleUrl: './agent-builder.component.scss'
+  styleUrls: ['./agent-builder.component.scss']
 })
 export class AgentBuilderComponent {
   agentName: string = '';

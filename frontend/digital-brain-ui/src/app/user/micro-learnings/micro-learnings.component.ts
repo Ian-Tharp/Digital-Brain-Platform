@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './micro-learnings.component.html',
-  styleUrl: './micro-learnings.component.scss'
+  styleUrls: ['./micro-learnings.component.scss']
 })
 export class MicroLearningsComponent {
 

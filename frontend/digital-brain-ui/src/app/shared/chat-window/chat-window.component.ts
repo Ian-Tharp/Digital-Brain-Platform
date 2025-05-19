@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './chat-window.component.html',
-  styleUrl: './chat-window.component.scss'
+  styleUrls: ['./chat-window.component.scss']
 })
 export class ChatWindowComponent {
 

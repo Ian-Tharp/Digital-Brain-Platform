@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './agent-library.component.html',
-  styleUrl: './agent-library.component.scss'
+  styleUrls: ['./agent-library.component.scss']
 })
 export class AgentLibraryComponent {
 

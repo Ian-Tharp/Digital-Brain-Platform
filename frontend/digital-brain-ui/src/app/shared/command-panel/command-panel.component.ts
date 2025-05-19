@@ -16,7 +16,7 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule
   ],
   templateUrl: './command-panel.component.html',
-  styleUrl: './command-panel.component.scss'
+  styleUrls: ['./command-panel.component.scss']
 })
 export class CommandPanelComponent {
   public commandInput: string = '';
