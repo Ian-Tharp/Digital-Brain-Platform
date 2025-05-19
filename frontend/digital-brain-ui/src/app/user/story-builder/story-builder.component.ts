@@ -13,7 +13,7 @@ import { marked } from 'marked';
   standalone: true,
   imports: [FormsModule, MatFormFieldModule, MatInputModule, MatButtonModule],
   templateUrl: './story-builder.component.html',
-  styleUrl: './story-builder.component.scss'
+  styleUrls: ['./story-builder.component.scss']
 })
 export class StoryBuilderComponent {
   userInput: string = '';

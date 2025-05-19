@@ -42,7 +42,7 @@ interface JournalEntry {
     MatSelectModule
   ],
   templateUrl: './interactive-journal.component.html',
-  styleUrl: './interactive-journal.component.scss'
+  styleUrls: ['./interactive-journal.component.scss']
 })
 export class InteractiveJournalComponent {
     selectedDate: Date = new Date();

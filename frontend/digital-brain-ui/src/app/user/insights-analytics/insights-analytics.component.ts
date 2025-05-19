@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './insights-analytics.component.html',
-  styleUrl: './insights-analytics.component.scss'
+  styleUrls: ['./insights-analytics.component.scss']
 })
 export class InsightsAnalyticsComponent {
 
